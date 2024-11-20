@@ -52,6 +52,30 @@ people = st.Page(
   default=False
 )
 
+activity = st.Page(
+  'people/activity_report.py', 
+  title = 'Activity Report',  
+  icon=":material/motion_sensor_active:",
+  default=False
+)
+
+inactive = st.Page(
+  'people/inactive_report.py', 
+  title = 'Inactive Report',  
+  icon=":material/person_remove:",
+  default=False
+)
+
+pdq = st.Page(
+  'people/people_data_quality.py', 
+  title = 'Data Quality Report',  
+  icon=":material/equalizer:",
+  default=False
+)
+
+
+
+
 
 
 
@@ -61,8 +85,7 @@ pg = st.navigation(
             " ": [home],
             "Giving Analytics": [yoy_giving, fee_giving, forecast_giving, donor_risk],
             "Headcount Analytics": [headcount],
-            "People Analytics": [people]
-
+            "People Analytics": [people, activity, inactive, pdq]
         }
     )
 

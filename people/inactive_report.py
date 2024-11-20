@@ -1,8 +1,40 @@
+# import packages
+]import streamlit as st
+import pandas as pd
+import numpy as np
+import altair as alt
+
+inactive_explaination_str = ''' The "Inactive Report" shows what types of people have been inactive and why they went inactive.'''
 
 
+conn = st.connection('snowflake')
+
+st.title('Inactive Report')
 
 with st.expander("Click to Learn More"):
     st.write(inactive_explaination_str)    
+
+# load analytical dataframe
+people_data = conn.query('''
+SELECT 
+    LONGITUDE,
+    LATITUDE,
+    PRIMARY_CAMPUS as "Primary Campus",
+    AGE_GROUP as "Age Group",
+    STATUS as "Status",
+    MEMBERSHIP as "Membership",
+    MARITAL_STATUS as "Marital Status",
+    PERSON_ID,
+    HOUSEHOLD_ID,
+    AGE as "Age",
+    YEARS_SINCE_UPDATE as "Years Since Update",
+    INACTIVE_REASON as "Inactive Reason",
+    CONCAT(CITY, ',' , STATE) as "Location",
+    DATE_TRUNC('month', CREATED_AT) as "Created At",
+    DATE_TRUNC('month', INACTIVATED_AT) as "Inactivated At",
+    YEAR(CAST(CREATED_AT as DATE)) as "Year",
+    WEEK(CAST(CREATED_AT as DATE)) as "Week"
+FROM ANALYTICAL_PEOPLE''', ttl=0)
 
 inactive_data = people_data[(people_data['Status'] == 'inactive')]
 

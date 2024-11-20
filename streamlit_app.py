@@ -5,7 +5,7 @@ giving = st.Page(
 )
 
 headcount = st.Page(
-  'pages/1_Headcount.py', title = 'Headcount Report', default=False
+  'pages/2_Headcount.py', title = 'Headcount Report', default=False
 )
 
 

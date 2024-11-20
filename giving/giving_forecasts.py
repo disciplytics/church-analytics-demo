@@ -18,7 +18,6 @@ filter_years = conn.query('''
     FROM ANALYTICS.ANALYTICAL_GIVING
 
 ''', ttl=0)
-st.write(filter_years)
 
 filter_pcs = conn.query('''
     SELECT
@@ -40,7 +39,7 @@ with st.expander("Click to Learn More"):
     st.write(fct_explaination_string)
 
 
-max_year = pd.Series(filter_years).astype(int).values.max()
+max_year = filter_years['YEAR'].max()
 
 forecasts_df = conn.query(f'''
 SELECT 

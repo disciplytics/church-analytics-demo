@@ -38,6 +38,8 @@ with st.expander("Click to Learn More"):
     st.write(fct_explaination_string)
 
 
+max_year = [int(item) for item in a].max()
+
 forecasts_df = conn.query(f'''
 SELECT 
       DONATION_YEAR as "Year",
@@ -51,22 +53,8 @@ SELECT
       UPPER_BOUND as "Upper Bound" 
   FROM ANALYTICS.GIVING_FORECASTS_REPORT 
   WHERE YEAR(RECEIVED_AT) <= {max_year} AND 
-  YEAR(RECEIVED_AT) >= {max_year - 1}''', ttl=0)
+  YEAR(RECEIVED_AT) >= {max_year}''', ttl=0)
 
-# set default and options, have plan in case church only has one year
-try:
-    default_giving_years = [forecasts_df['Year'].max(), forecasts_df['Year'].max() - 1]
-    option_giving_years = forecasts_df['Year'].unique()
-
-    max_year_week = forecasts_df[forecasts_df['Year'] == forecasts_df['Year'].max()]['Week'].max()
-    max_year = forecasts_df['Year'].max()
-    
-except:
-    default_giving_years = [forecasts_df['Year'].max(),]
-    option_giving_years = forecasts_df['Year'].unique()
-
-    max_year_week = 52
-    max_year = forecasts_df['Year'].max()
     
 filter_col, col2 = st.columns([.30, .7])
 

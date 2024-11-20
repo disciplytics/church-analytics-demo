@@ -6,8 +6,10 @@ import streamlit as st
     
 #)
 
-st.write("# Church Analytics")
+st.write("# Church Analytics Demo")
 st.sidebar.success("Select a view above.")
+st.write("This app is for demo uses only. All data is fake.")
+
 
 st.markdown(
         """

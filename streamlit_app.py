@@ -45,7 +45,7 @@ people = st.Page(
 pg = st.navigation(
         {
             " ": [home],
-            "Giving Report": [yoy_giving],
+            "Giving Report": [yoy_giving, fee_giving],
             "Reports": [giving, headcount, groups, people],
 
         }

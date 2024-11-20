@@ -75,7 +75,7 @@ pdq = st.Page(
 
 # group report
 group_attendance_report = st.Page(
-  'group/group_attendance_report.py', 
+  'groups/group_attendance_report.py', 
   title = 'Group Attendance Report',  
   icon=":material/groups:",
   default=False

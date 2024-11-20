@@ -40,7 +40,7 @@ people_data['LATITUDE'] = np.round(pd.to_numeric(people_data['LATITUDE'], errors
 #people_data['Created At'] = pd.to_datetime(people_data['Created At'], format = '%Y-%m-%d')
 
 with st.expander("Click to Learn More"):
-  st.write(adult_explaination_str)    
+  st.write(people_explaination_str)    
 
 col1, col2, col3, col4 = st.columns(4)
 

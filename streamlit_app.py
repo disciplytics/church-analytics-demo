@@ -44,6 +44,14 @@ headcount = st.Page(
   default=False
 )
 
+# people report
+people = st.Page(
+  'people/people.py', 
+  title = 'People Report',  
+  icon=":material/person:",
+  default=False
+)
+
 
 
 
@@ -53,6 +61,7 @@ pg = st.navigation(
             " ": [home],
             "Giving Analytics": [yoy_giving, fee_giving, forecast_giving, donor_risk],
             "Headcount Analytics": [headcount],
+            "People Analytics": [people]
 
         }
     )

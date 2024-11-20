@@ -26,22 +26,7 @@ filter_pcs = conn.query('''
     FROM ANALYTICS.ANALYTICAL_GIVING
 
 ''', ttl=0)
-        
-# FEE Tab
-filter_year_col, filter_pc_col, fill1, fill2 = st.columns([.25, .25, .25, .25])
-with filter_year_col:
-    giving_year_sel = st.multiselect(
-            'Select Years to Compare',
-            options = filter_years['YEAR'],
-            default = [filter_years['YEAR'].max(), filter_years['YEAR'].max()-1],
-        )
-
-with filter_pc_col:
-    giving_pc_sel = st.multiselect(
-                'Select Primary Campus',
-                options = filter_pcs['PRIMARY_CAMPUS'],
-                default = filter_pcs['PRIMARY_CAMPUS'],
-            )
+    
     
 filter_year_col2, filter_pc_col2, fill3, fill4 = st.columns([.25, .25, .25, .25])
 with filter_year_col2:

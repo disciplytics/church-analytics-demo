@@ -29,6 +29,12 @@ forecast_giving = st.Page(
   default=False
 )
 
+donor_risk = st.Page(
+  'giving/donor_risk.py', 
+  title = 'Donor Risk Report',
+  icon=":material/health_and_safety:",
+  default=False
+)
 
 giving = st.Page(
   'pages/1_Giving.py', title = 'Giving Report',  default=False
@@ -52,7 +58,7 @@ people = st.Page(
 pg = st.navigation(
         {
             " ": [home],
-            "Giving Report": [yoy_giving, fee_giving, forecast_giving],
+            "Giving Report": [yoy_giving, fee_giving, forecast_giving, donor_risk],
             "Reports": [giving, headcount, groups, people],
 
         }

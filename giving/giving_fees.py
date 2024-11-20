@@ -9,7 +9,6 @@ conn = st.connection("snowflake")
 
 # Page Parameters
 st.header("Giving Fee Report")
-st.write("Multiple reports to better understand giving in your church.")
 
 # GET FILTERS
 filter_years = conn.query('''

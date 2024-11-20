@@ -15,7 +15,7 @@ Select one group at a time for optimal performance.
 
 
 # Get current session
-conn = st.connections('snowflake')
+conn = st.connection('snowflake')
 
 # Set page config
 st.title('Group Analytics')

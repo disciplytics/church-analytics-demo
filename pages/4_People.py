@@ -181,23 +181,23 @@ with activity_tab:
     with col11:
         sel11 = st.multiselect(
                 "Select Primary Campus",
-                people_data['Primary Campus'].unique(),
-                default = people_data['Primary Campus'].unique())
+                ['Campus 1', 'Campus 2'],
+                default = ['Campus 1', 'Campus 2'])
     with col12:
         sel12 = st.multiselect(
                 "Select Age Group",
-                people_data['Age Group'].unique(),
-                default = people_data['Age Group'].unique())
+                field_data['Age Group'].unique(),
+                default = field_data['Age Group'].unique())
     with col13:
         sel13 = st.multiselect(
                 "Select Membership",
-                people_data['Membership'].unique(),
-                default = people_data['Membership'].unique())
+                field_data['Membership'].unique(),
+                default = field_data['Membership'].unique())
     with col14:
         sel14 = st.multiselect(
                 "Select Marital Status",
-                people_data['Marital Status'].unique(),
-                default = people_data['Marital Status'].unique())
+                field_data['Marital Status'].unique(),
+                default = field_data['Marital Status'].unique())
 
     people_act_data = field_data.query('`Primary Campus`== @sel11').query('`Age Group`== @sel12').query('`Membership`== @sel13').query('`Marital Status`== @sel14')
     people_act_data['Activity Date'] = pd.to_datetime(people_act_data['Activity Date'])

@@ -15,7 +15,7 @@ conn = st.connection('snowflake')
 
 
 # Set page config
-st.title('Group Analytics')
+st.title('Group Attendance Report')
 
 with st.expander("Click to Learn More"):
         st.write(explaination_str)

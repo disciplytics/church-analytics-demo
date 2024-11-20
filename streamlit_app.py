@@ -1,7 +1,7 @@
 import streamlit as st
   
 home_page = st.Page(
-  'home_page/home_page.py', title = 'Home', icon=":material/home:", default=True
+  'pages/1_Giving.py', title = 'Giving Report', icon=":material/money:", default=True
 )
 
 

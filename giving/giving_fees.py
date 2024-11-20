@@ -8,7 +8,7 @@ import altair as alt
 conn = st.connection("snowflake")
 
 # Page Parameters
-#st.set_page_config(page_title = "Giving Analytics", layout='wide')
+st.set_page_config(layout='wide')
 st.header("Giving Analytics")
 st.write("Multiple reports to better understand giving in your church.")
 

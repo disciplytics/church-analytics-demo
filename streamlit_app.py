@@ -40,26 +40,15 @@ giving = st.Page(
   'pages/1_Giving.py', title = 'Giving Report',  default=False
 )
 
-headcount = st.Page(
-  'pages/2_Headcount.py', title = 'Headcount Report', default=False
-)
 
-groups = st.Page(
-  'pages/3_Groups.py', title = 'Groups Report', default=False
-)
-
-
-people = st.Page(
-  'pages/4_People.py', title = 'People Report', default=False
-)
 
 
 
 pg = st.navigation(
         {
             " ": [home],
-            "Giving Report": [yoy_giving, fee_giving, forecast_giving, donor_risk],
-            "Reports": [giving, headcount, groups, people],
+            "Giving Analytics": [yoy_giving, fee_giving, forecast_giving, donor_risk],
+            "Headcount Analytics": [giving],
 
         }
     )

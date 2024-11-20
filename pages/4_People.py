@@ -180,22 +180,22 @@ with activity_tab:
 
     with col11:
         sel11 = st.multiselect(
-                "Select Primary Campus",
+                "Primary Campus",
                 field_data['Primary Campus'].unique(),
                 default = field_data['Primary Campus'].unique())
     with col12:
         sel12 = st.multiselect(
-                "Select Age Group",
+                "Age Group",
                 field_data['Age Group'].unique(),
                 default = field_data['Age Group'].unique())
     with col13:
         sel13 = st.multiselect(
-                "Select Membership",
+                "Membership",
                 field_data['Membership'].unique(),
                 default = field_data['Membership'].unique())
     with col14:
         sel14 = st.multiselect(
-                "Select Marital Status",
+                "Marital Status",
                 field_data['Marital Status'].unique(),
                 default = field_data['Marital Status'].unique())
 

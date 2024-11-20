@@ -1,4 +1,7 @@
 import streamlit as st
+
+home = st.Page('home.py', title = 'Home',  default=True
+)
   
 giving = st.Page(
   'pages/1_Giving.py', title = 'Giving Report',  default=False
@@ -21,7 +24,8 @@ people = st.Page(
 
 pg = st.navigation(
         {
-            " ": [giving, headcount, groups, people],
+            " ": [home],
+            "Reports": [giving, headcount, groups, people],
 
         }
     )

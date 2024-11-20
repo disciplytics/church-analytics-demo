@@ -53,6 +53,21 @@ SELECT
   WHERE YEAR(RECEIVED_AT) <= {max_year} AND 
   YEAR(RECEIVED_AT) >= {max_year - 1}''', ttl=0)
 
+# set default and options, have plan in case church only has one year
+try:
+    default_giving_years = [forecasts_df['Year'].max(), forecasts_df['Year'].max() - 1]
+    option_giving_years = forecasts_df['Year'].unique()
+
+    max_year_week = forecasts_df[forecasts_df['Year'] == forecasts_df['Year'].max()]['Week'].max()
+    max_year = forecasts_df['Year'].max()
+    
+except:
+    default_giving_years = [forecasts_df['Year'].max(),]
+    option_giving_years = forecasts_df['Year'].unique()
+
+    max_year_week = 52
+    max_year = forecasts_df['Year'].max()
+    
 filter_col, col2 = st.columns([.30, .7])
 
 fct_giving_pc_sel = filter_col.multiselect(

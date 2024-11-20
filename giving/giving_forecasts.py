@@ -34,7 +34,7 @@ To ensure your church's forecasts are as accurate as possible, please assign all
 
 While AI models have shown to be useful in forecasting, please note that these forecasts are probabalistic and cannot foresee future events that may affect your church's donor patterns. Use this data with care and caution. 
 '''
-with forecast_tab.expander("Click to Learn More"):
+with st.expander("Click to Learn More"):
     st.write(fct_explaination_string)
 
 

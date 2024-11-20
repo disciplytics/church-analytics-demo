@@ -35,7 +35,7 @@ risk_df.loc[risk_df['Donor Risk Rating'] == 'DONOR_INACTIVE', 'Donor Risk Rating
 
 risk_explaination_str = ''' 
     
-    The "Donor Risk Report" shows what donors may be "falling off" based on their normal giving patters.
+    The "Donor Risk Report" shows what donors may be "falling off" based on their normal giving patterns.
 
     All donors in this report have made at least one donation in the last rolling year.
 

@@ -36,19 +36,23 @@ donor_risk = st.Page(
   default=False
 )
 
-giving = st.Page(
-  'pages/1_Giving.py', title = 'Giving Report',  default=False
+# headcount reports
+headcount = st.Page(
+  'headcount/headcount.py', 
+  title = 'Headcount Report',  
+  icon=":material/group_add:",
+  default=False
 )
 
 
 
 
-
+# navigation 
 pg = st.navigation(
         {
             " ": [home],
             "Giving Analytics": [yoy_giving, fee_giving, forecast_giving, donor_risk],
-            "Headcount Analytics": [giving],
+            "Headcount Analytics": [headcount],
 
         }
     )

@@ -186,8 +186,8 @@ with activity_tab:
     with col12:
         sel12 = st.multiselect(
                 "Select Age Group",
-                field_data['Age Group'].unique(),
-                default = field_data['Age Group'].unique())
+                ['Child (0-17)', 'Young Adult (18-29)', 'Adult (30-64)', 'Senior (65+)', 'Unknown'],
+                default = ['Child (0-17)', 'Young Adult (18-29)', 'Adult (30-64)', 'Senior (65+)', 'Unknown'])
     with col13:
         sel13 = st.multiselect(
                 "Select Membership",

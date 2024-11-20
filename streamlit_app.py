@@ -15,6 +15,13 @@ yoy_giving = st.Page(
   default=False
 )
 
+fee_giving = st.Page(
+  'giving/giving_fees.py', 
+  title = 'Giving Fees Report',
+  icon=":material/sell:",
+  default=False
+)
+
 
 giving = st.Page(
   'pages/1_Giving.py', title = 'Giving Report',  default=False

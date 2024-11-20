@@ -46,7 +46,7 @@ headcount = st.Page(
 
 # people report
 people = st.Page(
-  'people/people.py', 
+  'people/people_report.py', 
   title = 'People Report',  
   icon=":material/person:",
   default=False

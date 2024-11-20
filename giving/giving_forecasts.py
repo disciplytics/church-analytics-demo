@@ -38,7 +38,7 @@ with st.expander("Click to Learn More"):
     st.write(fct_explaination_string)
 
 
-max_year = [int(item) for item in a].max()
+max_year = max([int(item) for item in filter_years])
 
 forecasts_df = conn.query(f'''
 SELECT 

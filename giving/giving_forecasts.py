@@ -54,7 +54,7 @@ SELECT
       UPPER_BOUND as "Upper Bound" 
   FROM ANALYTICS.GIVING_FORECASTS_REPORT 
   WHERE YEAR(RECEIVED_AT) <= {max_year} AND 
-  YEAR(RECEIVED_AT) >= {max_year}''', ttl=0)
+  YEAR(RECEIVED_AT) >= {max_year - 1}''', ttl=0)
 
     
 filter_col, col2 = st.columns([.30, .7])

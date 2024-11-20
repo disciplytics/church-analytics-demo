@@ -9,10 +9,15 @@ headcount = st.Page(
 )
 
 
+people = st.Page(
+  'pages/4_People.py', title = 'People Report', default=False
+)
+
+
 
 pg = st.navigation(
         {
-            " ": [giving, headcount],
+            " ": [giving, headcount, people],
 
         }
     )

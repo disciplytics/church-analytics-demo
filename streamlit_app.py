@@ -22,6 +22,13 @@ fee_giving = st.Page(
   default=False
 )
 
+forecast_giving = st.Page(
+  'giving/giving_forecasts.py', 
+  title = 'Giving Forecast Report',
+  icon=":material/query_stats:",
+  default=False
+)
+
 
 giving = st.Page(
   'pages/1_Giving.py', title = 'Giving Report',  default=False
@@ -45,7 +52,7 @@ people = st.Page(
 pg = st.navigation(
         {
             " ": [home],
-            "Giving Report": [yoy_giving, fee_giving],
+            "Giving Report": [yoy_giving, fee_giving, forecast_giving],
             "Reports": [giving, headcount, groups, people],
 
         }

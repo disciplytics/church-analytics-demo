@@ -228,21 +228,21 @@ with activity_tab:
     people_act_data = people_act_data.query('`Activity`== @sel5').query('`Activity Date`>= @sel20').query('`Activity Date`<= @sel21')
 
 
-    st.altair_chart(
-        alt.Chart(people_act_data, 
-                  title = 'Activity Trends').mark_bar().encode(
-                color = 'Year',
-                x=alt.X('Activity Date'), 
-                y=alt.Y('count(PERSON_ID)').title('Total People')), 
-            use_container_width=True)
+    #st.altair_chart(
+    #    alt.Chart(people_act_data, 
+    #              title = 'Activity Trends').mark_bar().encode(
+    #            color = 'Year',
+    #            x=alt.X('Activity Date'), 
+    #            y=alt.Y('count(PERSON_ID)').title('Total People')), 
+    #        use_container_width=True)
 
-    st.altair_chart(
-        alt.Chart(people_act_data, 
-                  title = 'Activity Sequence').mark_bar().encode(
-                color = 'Activity',
-                x=alt.X('Sequence'), 
-                y=alt.Y('count(PERSON_ID)').title('Total People')), 
-            use_container_width=True)
+    #st.altair_chart(
+    #    alt.Chart(people_act_data, 
+    #              title = 'Activity Sequence').mark_bar().encode(
+    #           color = 'Activity',
+    #           x=alt.X('Sequence'), 
+    #            y=alt.Y('count(PERSON_ID)').title('Total People')), 
+    #        use_container_width=True)
 
     st.subheader('Activity Breakdowns')
 

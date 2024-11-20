@@ -73,10 +73,13 @@ pdq = st.Page(
   default=False
 )
 
-
-
-
-
+# group report
+group_attendance_report = st.Page(
+  'group/group_attendance_report.py', 
+  title = 'Group Attendance Report',  
+  icon=":material/groups:",
+  default=False
+)
 
 
 # navigation 
@@ -85,7 +88,8 @@ pg = st.navigation(
             " ": [home],
             "Giving Analytics": [yoy_giving, fee_giving, forecast_giving, donor_risk],
             "Headcount Analytics": [headcount],
-            "People Analytics": [people, activity, inactive, pdq]
+            "People Analytics": [people, activity, inactive, pdq],
+            "Group Analytics": [group_attendance_report]
         }
     )
 

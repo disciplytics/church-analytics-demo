@@ -8,8 +8,7 @@ import altair as alt
 conn = st.connection("snowflake")
 
 # Page Parameters
-st.set_page_config(layout='wide')
-st.header("Giving Analytics")
+st.header("Giving Fee Report")
 st.write("Multiple reports to better understand giving in your church.")
 
 # GET FILTERS

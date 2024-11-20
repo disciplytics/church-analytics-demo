@@ -1,6 +1,6 @@
 import streamlit as st
 
-home = st.Page('home.py', title = 'Home',  default=True
+home = st.Page('Welcome.py', title = 'Welcome',  default=True
 )
   
 giving = st.Page(

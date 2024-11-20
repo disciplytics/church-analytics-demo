@@ -11,8 +11,6 @@ conn = st.connection("snowflake")
 st.set_page_config(page_title = "Giving Analytics", layout='wide')
 st.header("Giving Analytics")
 st.write("Multiple reports to better understand giving in your church.")
-# Get the current credentials
-session = get_active_session()
 
 # GET FILTERS
 filter_years = conn.query('''

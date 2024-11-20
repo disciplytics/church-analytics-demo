@@ -1,3 +1,4 @@
+
 # Import python packages
 import streamlit as st
 import pandas as pd
@@ -17,6 +18,7 @@ filter_years = conn.query('''
     FROM ANALYTICS.ANALYTICAL_GIVING
 
 ''', ttl=0)
+st.write(filter_years)
 
 filter_pcs = conn.query('''
     SELECT

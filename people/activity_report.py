@@ -86,6 +86,7 @@ with col21:
 
 people_act_data = people_act_data.query('`Activity`== @sel5').query('`Activity Date`>= @sel20').query('`Activity Date`<= @sel21')
 
+people_act_data['Sequence'] = people_act_data['Sequence'].astype(str)
 
 st.altair_chart(
     alt.Chart(people_act_data, 

@@ -87,13 +87,15 @@ with col21:
 people_act_data = people_act_data.query('`Activity`== @sel5').query('`Activity Date`>= @sel20').query('`Activity Date`<= @sel21')
 
 people_act_data['Sequence'] = people_act_data['Sequence'].astype(str)
+people_act_data['count'] = np.random.randint(1, 3, people_act_data.shape[0])
+
 
 st.altair_chart(
     alt.Chart(people_act_data, 
               title = 'Activity Trends').mark_bar().encode(
             color = 'Year',
             x=alt.X('Activity Date'), 
-            y=alt.Y('count(PERSON_ID)').title('Total People')), 
+            y=alt.Y('sum(count)').title('Total People')), 
         use_container_width=True)
 
 st.altair_chart(

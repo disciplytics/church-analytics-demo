@@ -41,9 +41,6 @@ SELECT
     YEAR(CAST(CREATED_AT as DATE)) as "Year",
     WEEK(CAST(CREATED_AT as DATE)) as "Week"
 FROM ANALYTICAL_PEOPLE''', ttl=0)
-
-with st.expander("Click to Learn More"):
-    st.write(pdq_explaination_str)
     
 quality_selection = people_data[(people_data['Status'] == 'active')]
 

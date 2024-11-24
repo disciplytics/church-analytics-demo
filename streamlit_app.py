@@ -85,7 +85,7 @@ group_attendance_report = st.Page(
 # navigation 
 pg = st.navigation(
         {
-            " ": [home],
+            "Home": [home],
             "Giving Analytics": [yoy_giving, fee_giving, forecast_giving, donor_risk],
             "Headcount Analytics": [headcount],
             "People Analytics": [people, activity, inactive, pdq],
